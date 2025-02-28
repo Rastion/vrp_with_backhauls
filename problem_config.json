@@ -3,15 +3,17 @@
     "default_params": {
       "instance_file": "instances/A1.vrpb"
     },
-    "problem_type": "Vehicle Routing Problem with Backhauls",
+    "creator": "Rastion",
+    "type": "problem",
+    "problem_name": "Vehicle routing problem with backhauls",
     "description": "In the VRPB, vehicles must serve customers with both delivery and pickup demands. Deliveries (customers not in the backhaul set) must be completed before any pickups (customers in the backhaul set) on a route. Each customer is visited exactly once and capacity constraints (for both delivery and pickup loads) must be respected. The objective is to minimize the total distance traveled by all vehicles.",
+    "link_to_dataset": "https://github.com/Rastion/vrp_with_backhauls/blob/main/instances/A1.vrpb",
     "keywords": [
       "vrpb",
       "vehicle routing",
       "backhauls",
-      "routing",
-      "optimization"
-    ],
+      "route-optimization"
+        ],
     "data_format": {
       "instance_file": {
         "format": "The instance file follows a CVRPLib format. It includes: DIMENSION (total nodes, with one depot and customers), VEHICLES (number of trucks), CAPACITY (truck capacity), NODE_COORD_SECTION (coordinates with depot first), DEMAND_SECTION (demands, with depot demand 0), BACKHAUL_SECTION (list of pickup node ids), and DEPOT_SECTION."
@@ -29,12 +31,8 @@
       "description": "Minimize the total travel distance of all routes, while ensuring that all capacity and precedence (delivery before pickup) constraints are met."
     },
     "solution_representation": "A list of routes, each route a list of customer indices.",
-    "compatible_optimizers": [
-      "genetic_algorithm",
-      "simulated_annealing",
-      "particle_swarm",
-      "tabu_search",
-      "rl_optimizer"
+    "formulations": [
+      ""
     ]
   }
   
